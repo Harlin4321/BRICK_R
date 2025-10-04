@@ -27,13 +27,17 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset(
               'assets/images/brand_20251004_092516.png',
-              width: 150, // adjust size
+              width: 150,
               height: 150,
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'LabourConnect',
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -41,5 +45,6 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+
 
 
