@@ -22,11 +22,24 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'LabourConnect',
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/brand_20251004_092516.png',
+              width: 150, // adjust size
+              height: 150,
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'LabourConnect',
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+
