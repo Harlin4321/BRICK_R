@@ -23,20 +23,31 @@ class MyApp extends StatelessWidget {
         Locale('en', ''),
       ],
       theme: ThemeData(
+        useMaterial3: true, // Important for Flutter 3+
         primarySwatch: Colors.blue,
-        fontFamily: 'Roboto', // default font for body text
+        fontFamily: 'Roboto', // Default font for body text
         textTheme: const TextTheme(
-          headline1: TextStyle(fontFamily: 'Poppins', fontSize: 32, fontWeight: FontWeight.bold),
-          headline2: TextStyle(fontFamily: 'Poppins', fontSize: 24, fontWeight: FontWeight.bold),
-          headline3: TextStyle(fontFamily: 'Poppins', fontSize: 20, fontWeight: FontWeight.bold),
-          bodyText1: TextStyle(fontSize: 16), // Roboto by default
-          bodyText2: TextStyle(fontSize: 14),
-          button: TextStyle(fontWeight: FontWeight.bold),
+          displayLarge: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 32,
+              fontWeight: FontWeight.bold), // Heading 1
+          displayMedium: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 24,
+              fontWeight: FontWeight.bold), // Heading 2
+          displaySmall: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 20,
+              fontWeight: FontWeight.bold), // Heading 3
+          bodyLarge: TextStyle(fontSize: 16), // Roboto body
+          bodyMedium: TextStyle(fontSize: 14),
+          labelLarge: TextStyle(fontWeight: FontWeight.bold), // Buttons
         ),
       ),
-      home: const SplashScreen(),
+      home: const SplashScreen(), // Starting screen
     );
   }
 }
+
 
 
