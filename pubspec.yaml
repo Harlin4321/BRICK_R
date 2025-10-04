@@ -25,6 +25,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  # Assets
   assets:
+    - assets/images/brand_20251004_092516.png
     - assets/images/
     - assets/fonts/
+    
