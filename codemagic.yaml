@@ -21,7 +21,7 @@ workflows:
         script: flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
-    publishing:
+      publishing:
       email:
         recipients:
           - kr70136508@gmail.com
