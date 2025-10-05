@@ -1,4 +1,4 @@
-package com.example.brick_app
+package com.example.Brick_R
 
 import io.flutter.embedding.android.FlutterActivity
 
