@@ -1,32 +1,48 @@
-name: brick_app
-description: A labour–contractor connect app
+name: brick_r
+description: A new Flutter project named BRICK.
 publish_to: "none"
+
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.9.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
+
   cupertino_icons: ^1.0.8
-  provider: ^6.0.5
-  http: ^1.2.2
-  intl: ^0.20.2
-  shared_preferences: ^2.2.3
+  flutter_launcher_icons: ^0.13.1
+  animated_splash_screen: ^1.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.2
+  flutter_lints: ^5.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/brand_20251004_092516_0000.png"
 
 flutter:
   uses-material-design: true
-  # Removed missing asset references
+
   assets:
     - assets/images/brand_20251004_092516_0000.png
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+          
     
           
  
