@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'screens/splash_screen.dart'; // Make sure this path exists
+import 'screens/splash_screen.dart';  // Adjust path if needed
 
 void main() {
   runApp(const MyApp());
@@ -12,21 +12,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Brick App',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      supportedLocales: const [
-        Locale('en', 'US'),
-      ],
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      supportedLocales: const [
+        Locale('en', ''), // English
+      ],
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: const SplashScreen(),
     );
   }
 }
+
 
 
 
