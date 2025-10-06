@@ -1,50 +1,19 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
-  @override
-  _SplashScreenState createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => const LoginScreen()));
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/brand_20251004_092516.png',
-              width: 150,
-              height: 150,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'LabourConnect',
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
+        child: Image.asset('assets/images/brand_20251004_092516.png'),
       ),
     );
   }
 }
+
 
 
 
