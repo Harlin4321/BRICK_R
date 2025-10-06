@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   cupertino_icons: ^1.0.6
   provider: ^6.1.1
   http: ^1.2.1
@@ -26,13 +28,7 @@ flutter:
 
   assets:
     - assets/images/brand_20251004_092516.png
-
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
+    
           
  
 
