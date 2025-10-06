@@ -3,7 +3,8 @@ package com.example.brick_r
 import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity: FlutterActivity() {
-    // No need to override onCreate
+    // v2 embedding, no onCreate override needed
 }
+
 
 
