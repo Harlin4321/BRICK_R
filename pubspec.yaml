@@ -1,22 +1,21 @@
-name: brick_r
-description: A new Flutter project.
-publish_to: 'none'
-
+name: brick_app
+description: A labour–contractor connect app
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  sdk: ">=3.9.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  provider: ^6.1.1
-  http: ^1.2.1
-  shared_preferences: ^2.3.2
-  google_fonts: ^6.2.1
+  cupertino_icons: ^1.0.8
+  provider: ^6.0.5
+  http: ^1.2.2
+  intl: ^0.20.2
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -25,9 +24,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
+  # Removed missing asset references
   assets:
-    - assets/images/brand_20251004_092516_0000.png
+    - assets/images/   # Make sure this folder exists, can be empty for now
     
           
  
