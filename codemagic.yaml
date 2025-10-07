@@ -3,21 +3,14 @@ workflows:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
-      flutter: 3.35.5  # Modern Flutter version with Dart 3.5+
+      flutter: 3.35.5
       vars:
         PACKAGE_NAME: "com.example.brick_r"
 
     scripts:
-      - name: 🔹 Clear all caches (plugins, Gradle, builds)
+      - name: 🔹 Clean and get packages
         script: |
-          rm -rf ~/.pub-cache
-          rm -rf android/.gradle
-          rm -rf android/app/build
-          rm -rf build
           flutter clean
-
-      - name: 🔹 Get packages
-        script: |
           flutter pub get
 
       - name: 🔹 Build release APK
@@ -31,6 +24,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
           
           
