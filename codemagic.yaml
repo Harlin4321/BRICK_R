@@ -1,6 +1,6 @@
 workflows:
   build-android-release:
-    name: Build Android Release APK
+    name: BRICK_R
     max_build_duration: 60
     environment:
       flutter: stable
