@@ -8,15 +8,17 @@ workflows:
         PACKAGE_NAME: "com.example.brick_r"
 
     scripts:
-      - name: 🔹 Clean and get packages
+      - name: 🔹 Clear all caches (plugins, Gradle, builds)
         script: |
-          flutter clean
-          flutter pub get
-
-      - name: 🔹 Remove old Gradle and build caches
-        script: |
+          rm -rf ~/.pub-cache
           rm -rf android/.gradle
           rm -rf android/app/build
+          rm -rf build
+          flutter clean
+
+      - name: 🔹 Get packages
+        script: |
+          flutter pub get
 
       - name: 🔹 Build release APK
         script: |
@@ -29,6 +31,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
           
           
