@@ -6,15 +6,9 @@ workflows:
       flutter: stable
       vars:
         PACKAGE_NAME: "com.example.brick_r"
-      groups:
-        - keystore_credentials
       android_signing:
         - keystore_credentials
-      cache:
-        cache_paths:
-          - $HOME/.pub-cache
-          - $HOME/.gradle/caches
-          - $HOME/.gradle/wrapper
+
     scripts:
       - name: 🔹 Clean project
         script: |
@@ -36,4 +30,5 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
