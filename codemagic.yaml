@@ -3,14 +3,24 @@ workflows:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
-      flutter: stable
+      flutter: 3.19.6  # Use a stable modern Flutter version
       vars:
         PACKAGE_NAME: "com.example.brick_r"
+
     scripts:
       - name: 🔹 Clean and get packages
         script: |
           flutter clean
           flutter pub get
+
+      - name: 🔹 Remove old Gradle and build caches
+        script: |
+          rm -rf android/.gradle
+          rm -rf android/app/build
+
+      - name: 🔹 Upgrade Gradle wrapper
+        script: |
+          ./gradlew wrapper --gradle-version 8.6 --distribution-type all
 
       - name: 🔹 Build release APK
         script: |
@@ -23,6 +33,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
   
       
