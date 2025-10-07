@@ -32,6 +32,7 @@ flutter:
   assets:
     - assets/images/brand_20251006_150700_0000.png
 
+  flutter:
   fonts:
     - family: Poppins
       fonts:
@@ -43,6 +44,7 @@ flutter:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Bold.ttf
           weight: 700
+          
           
           
     
