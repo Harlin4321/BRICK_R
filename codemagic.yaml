@@ -1,5 +1,5 @@
 workflows:
-  build-android-release:
+  flutter-release-workflow:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
@@ -23,12 +23,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
-
-android_signing:
-  keystore_reference: keystore_credentials
-  keystore_password: $KEYSTORE_PASSWORD
-  key_alias: $KEY_ALIAS
-  key_password: $KEY_PASSWORD
+          
   
       
           
