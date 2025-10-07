@@ -3,7 +3,7 @@ workflows:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
-      flutter: 3.19.6  # Use a stable modern Flutter version
+      flutter: 3.35.5  # Modern Flutter version with Dart 3.5+
       vars:
         PACKAGE_NAME: "com.example.brick_r"
 
@@ -33,6 +33,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
           
   
