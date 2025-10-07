@@ -1,27 +1,20 @@
 workflows:
-  flutter-release-workflow:   # rename this to match Codemagic
-    name: Build Android Release APK
-    max_build_duration: 60
+  build-android-release:
+    name: Build Android Release APK (Signed)
     environment:
       flutter: stable
       vars:
         PACKAGE_NAME: "com.example.brick_r"
-      android_signing:
-        - keystore_credentials
-
     scripts:
       - name: 🔹 Clean project
         script: |
           flutter clean
           flutter pub get
 
-      - name: 🔹 Analyze project
+      - name: 🔹 Build signed release APK
         script: |
-          flutter analyze || true
-
-      - name: 🔹 Build release APK
-        script: |
-          flutter build apk --release
+          flutter build apk --release \
+            --build-name=1.0.0 --build-number=1
 
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
@@ -30,5 +23,11 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+    android_signing:
+      keystore_reference: keystore_credentials
+      keystore_password: $KEYSTORE_PASSWORD
+      key_alias: $KEY_ALIAS
+      key_password: $KEY_PASSWORD
+      
           
           
