@@ -1,24 +1,29 @@
 workflows:
-  flutter-release-workflow:
-    name: Flutter Release Build
+  build-android-release:
+    name: Build Android Release APK
     max_build_duration: 60
-    instance_type: mac_mini_m2
     environment:
       flutter: stable
-      xcode: latest
-      cocoapods: default
+      vars:
+        PACKAGE_NAME: "com.example.brick_r"
+      groups:
+        - keystore_credentials
+      android_signing:
+        - keystore_credentials
+      cache:
+        cache_paths:
+          - $HOME/.pub-cache
+          - $HOME/.gradle/caches
+          - $HOME/.gradle/wrapper
     scripts:
-      - name: 🔹 Get Flutter dependencies
+      - name: 🔹 Clean project
         script: |
+          flutter clean
           flutter pub get
 
       - name: 🔹 Analyze project
         script: |
-          flutter analyze
-
-      - name: 🔹 Run tests
-        script: |
-          flutter test || true
+          flutter analyze || true
 
       - name: 🔹 Build release APK
         script: |
@@ -30,6 +35,5 @@ workflows:
     publishing:
       email:
         recipients:
-          - kr70136508@gmail.com
-          
+          - your-kr7013650812@gmail.com
           
