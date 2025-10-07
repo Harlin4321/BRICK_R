@@ -1,6 +1,6 @@
 workflows:
-  build-android-release:
-    name: BRICK_R
+  flutter-release-workflow:   # rename this to match Codemagic
+    name: Build Android Release APK
     max_build_duration: 60
     environment:
       flutter: stable
