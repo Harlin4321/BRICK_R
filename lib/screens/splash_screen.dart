@@ -1,36 +1,51 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Make sure login_screen.dart exists
+import 'home_screen.dart'; // your main screen
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  _SplashScreenState createState() => _SplashScreenState();
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'BRICK_R',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SplashWrapper(),
+    );
+  }
+}
+
+class SplashWrapper extends StatefulWidget {
+  @override
+  _SplashWrapperState createState() => _SplashWrapperState();
+}
+
+class _SplashWrapperState extends State<SplashWrapper> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => const LoginScreen()));
+          context, MaterialPageRoute(builder: (_) => HomeScreen()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text(
-          'LabourConnect',
-          style: TextStyle(
-              fontSize: 32, fontWeight: FontWeight.bold, color: Colors.blue),
-        ),
+        child: Image.asset('assets/images/brand_20251006_150700_0000.png'),
       ),
     );
   }
 }
+
 
 
 
