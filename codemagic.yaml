@@ -1,20 +1,20 @@
 workflows:
   build-android-release:
-    name: Build Android Release APK (Signed)
+    name: Build Android Release APK
+    max_build_duration: 60
     environment:
       flutter: stable
       vars:
         PACKAGE_NAME: "com.example.brick_r"
     scripts:
-      - name: 🔹 Clean project
+      - name: 🔹 Clean and get packages
         script: |
           flutter clean
           flutter pub get
 
-      - name: 🔹 Build signed release APK
+      - name: 🔹 Build release APK
         script: |
-          flutter build apk --release \
-            --build-name=1.0.0 --build-number=1
+          flutter build apk --release --build-name=1.0.0 --build-number=1
 
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
@@ -23,11 +23,13 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
-    android_signing:
-      keystore_reference: keystore_credentials
-      keystore_password: $KEYSTORE_PASSWORD
-      key_alias: $KEY_ALIAS
-      key_password: $KEY_PASSWORD
+
+android_signing:
+  keystore_reference: keystore_credentials
+  keystore_password: $KEYSTORE_PASSWORD
+  key_alias: $KEY_ALIAS
+  key_password: $KEY_PASSWORD
+  
       
           
           
