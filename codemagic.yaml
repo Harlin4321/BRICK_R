@@ -3,7 +3,7 @@ workflows:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
-      flutter: 3.35.5  # Modern Flutter version with Dart 3.5+
+      flutter: 3.35.5
       vars:
         PACKAGE_NAME: "com.example.brick_r"
 
@@ -18,10 +18,6 @@ workflows:
           rm -rf android/.gradle
           rm -rf android/app/build
 
-      - name: 🔹 Upgrade Gradle wrapper
-        script: |
-          ./gradlew wrapper --gradle-version 8.6 --distribution-type all
-
       - name: 🔹 Build release APK
         script: |
           flutter build apk --release --build-name=1.0.0 --build-number=1
@@ -33,6 +29,7 @@ workflows:
       email:
         recipients:
           - your-kr7013650812@gmail.com
+          
           
           
           
