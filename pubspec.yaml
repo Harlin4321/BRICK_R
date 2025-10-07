@@ -1,5 +1,5 @@
 name: brick_r
-description: A new Flutter project named BRICK.
+description: A new Flutter project named BRICK_R.
 publish_to: "none"
 
 version: 1.0.0+1
@@ -24,15 +24,14 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/brand_20251006_150700_0000.png"
+  image_path: "assets/images/brand_20251004_092516_0000.png"
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/brand_20251006_150700_0000.png
+    - assets/images/brand_20251004_092516_0000.png
 
-  flutter:
   fonts:
     - family: Poppins
       fonts:
@@ -44,6 +43,7 @@ flutter:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Bold.ttf
           weight: 700
+          
           
           
           
