@@ -1,1 +1,47 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+
+/* Begin PBXBuildFile section */
+    /* Add build file references here, e.g., AppDelegate.swift, main.dart */
+  /* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+    /* Add file references here, e.g., Info.plist, LaunchScreen.storyboard */
+  /* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+    /* Project folder hierarchy */
+  /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+    /* Runner target */
+  /* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+    /* Main project settings */
+    /* Example minimal block: */
+    /* 
+    12345 /* Project object */ = {
+        isa = PBXProject;
+        attributes = {
+            LastUpgradeCheck = 1310;
+        };
+        buildConfigurationList = 123ABC /* Build configuration list */;
+        compatibilityVersion = "Xcode 14.0";
+        mainGroup = 123XYZ;
+        productRefGroup = 123XYZ;
+        projectDirPath = "";
+        targets = (
+            123RUNNER /* Runner */,
+        );
+    };
+    */
+  /* End PBXProject section */
+  };
+  rootObject = 12345 /* Project object */;
+}
 
