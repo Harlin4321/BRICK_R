@@ -1,0 +1,31 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '12.0'
+
+# CocoaPods analytics disabled for CI/CD speed
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def parse_KV_file(file, separator='=')
+  return {} if !File.exist?(file)
+  file.split("\n").map { |line|
+    next if line.strip.empty? || line.start_with?('#')
+    key, value = line.split(separator, 2)
+    [key.strip, value.strip] if key && value
+  }.compact.to_h
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), Dir.pwd)
+
+flutter_ios_podfile_setup
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
