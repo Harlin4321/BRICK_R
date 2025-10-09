@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.example.yourapp"  // Replace with your package name
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
