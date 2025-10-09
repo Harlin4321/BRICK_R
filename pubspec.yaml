@@ -1,54 +1,47 @@
 name: brick_r
-description: A Flutter project named BRICK_R.
+description: A Flutter project for building release APK
 publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
+
+  # Common Flutter packages
   cupertino_icons: ^1.0.8
-  flutter_launcher_icons: ^0.13.1
-  flutter_native_splash: ^2.3.0
   page_transition: ^2.2.1
+  intl: ^0.20.2
+
+  # UI utilities
+  google_fonts: ^6.2.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
-flutter_icons:
-  android: true
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
   ios: true
   image_path: "assets/images/brand_20251006_150700_0000.png"
+  remove_alpha_ios: true
 
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/brand_20251006_150700_0000.png
   android: true
   ios: true
-  fill: true
-
-flutter:
-  uses-material-design: true
-
-  assets:
-    - assets/images/brand_20251006_150700_0000.png
-
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-Bold.ttf
-          weight: 700
-    - family: Lato
-      fonts:
-        - asset: assets/fonts/Lato-Regular.ttf
-        - asset: assets/fonts/Lato-Bold.ttf
-          weight: 700
+  
           
